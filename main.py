@@ -160,41 +160,67 @@
   
 
 
-student={}
-students=[]
+# student={}
+# students=[]
 
-entervalue=True
-while entervalue:
-  inserttimes = int(input ('how many elements do you want to have?'))
-  deckey= input ('enter the key of the student')
-  valueType =int(input ('enter the type of the value 1 for str 2 for int 3 for list 4 for dict'))
-  if valueType ==1:
-    student[deckey]=input ('enter the value')
+# entervalue=True
+# while entervalue:
+#   inserttimese = int(input ('how many elements do you want to have?'))
+#   deckey= input ('enter the key of the student')
+#   valueType =int(input ('enter the type of the value 1 for str 2 for int 3 for list 4 for dict'))
+#   if valueType ==1:
+#     student[deckey]=input ('enter the value')
    
-  elif valueType==2:
+#   elif valueType==2:
   
-    student[deckey]= int(input('enter the value'))  
+#     student[deckey]= int(input('enter the value'))  
     
-  elif valueType==3:
-    times = int (input('how many skills do you want to add'))
-    for j in range(times):
-      decValue=[]
-      listValue =input('enter the value ')
-      decValue.append(listValue)
+#   elif valuType==3:
+#     times = int (input('how many skills do you want to add'))
+#     for j in range(times):
+#       decValue=[]
+#       listValue =input('enter the value ')
+#       decValue.append(listValue)
       
-  elif valueType==4:
-    stdictionary={}
-    times= int(input('how many dictionary keys do you want to add?'))
-    for i in (times):
-      deckey=input('enter the dictinary key :')   
-      decValue =input ("enter the dictionary value") 
-      stdictionary[deckey]=decValue
+#   elif valueType==4:
+#     stdictionary={}
+#     times= int(input('how many dictionary keys do you want to add?'))
+#     for i in (times):
+#       deckey=input('enter the dictinary key :')   
+#       decValue =input ("enter the dictionary value") 
+#       stdictionary[deckey]=decValue
     
   
-  addother=input('do you want to add an other student?')     
-  if addother=='no':
-    entervalue=False
+#   addother=input('do you want to add an other student?')     
+#   if addother=='no':
+#     entervalue=False
    
-  students.append(student)     
-  print(students) 
- 
+#   students.append(student)     
+#   print(students) 
+print("welcome  coustumer in my website")
+print("you can chooze you propertize of your PC")
+print("and you can add the model you want ,price,type,...etc")
+print("*"*80)
+computers=[]
+while True:
+  computer={}
+  computer["storedg data"]=int(input("enter your storedge data that will be used"))
+  #        اسمها هون key\         هون اسمها value
+  computer["power of processor"]=int(input("enter your power of processor that you want"))
+  computer["size of screen"]=int(input("enter your size that you want"))
+  computer["componants of your PC"]=input("enter your componants that you want to add to this pc")
+  computer["Ram"]=int(input("enter your space of RAM that you want"))
+  computers.append(computer)
+  #هون انا بحكي ضيفلي كل عنصر في الديكشينري ل الليست الاصليه
+  if input("do want to add other propertize to your pc?")=="no":
+    
+    break
+for i in range(len(computers)):
+  
+    print("*"*80)
+    print("The ID number of your pc",i+1)
+    for j in computers[i]:
+      print(j, ":",computers[i][j])
+      #هاي الجمله معناها هون انه فوتلي على الديكشينري واحد واحد وال الجي رح تطبعلي ال كي وال كومبيوترز لل اي وال جي رح تطبعلي ال فاليو
+print(computer)
+  
