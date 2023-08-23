@@ -96,34 +96,102 @@
 #       print(student)
 #     elif choice ==3:
 #      break
-class Product:
-      def __init__(self, product_name ='default',expire=2022,origion_price=22,sell_price=33):
-        self.name= product_name
-        self.expire=expire
-        self.__origion_price=origion_price
-        self.sell_price =sell_price
+# class Product:
+#       def __init__(self, product_name ='default',expire=2022,origion_price=22,sell_price=33):
+#         self.name= product_name
+#         self.expire=expire
+#         self.__origion_price=origion_price
+#         self.sell_price =sell_price
         
-      def __str__(self):
-        return f' hello welcome for our products '  
+#       def __str__(self):
+#         return f' hello welcome for our products '  
       
       
         
         
-      def get_price(self):
-        self.sell_price = self.__origion_price +.3*self.__origion_price
-        return f'welcome , the price of {self.name }  is {self.sell_price}  '
+#       def get_price(self):
+#         self.sell_price = self.__origion_price +.3*self.__origion_price
+#         return f'welcome , the price of {self.name }  is {self.sell_price}  '
     
-name=input('enter the product name')
-expire =int(input('enter the expire of the product')) 
-origion_price = int (input('enter the sell price')) 
-product1=Product(name ,expire,origion_price )
+# name=input('enter the product name')
+# expire =int(input('enter the expire of the product')) 
+# origion_price = int (input('enter the sell price')) 
+# product1=Product(name ,expire,origion_price )
 
-print(product1)
+# print(product1)
 
-print(product1.get_price())
+# print(product1.get_price())
 
 
   
       
         
+
+# class Father :
+  
+#   def __init__(self,name='ali',age=50):
+#     self.fathername=name
+#     self.fatherage=age
+    
+#   def __str__(self):
+#    return f'hello my name is {self.fathername}'
+ 
+#   def talk(self):
+#     print (self.fathername)
+#     return f' hi my name is {self.fathername}'
+    
+ 
+# class Son(Father):
+#   def __init__(self,name,age,password='12345'):
+#     super().__init__()
+#     self.name=name
+#     self.age=age 
+#     self.__password=password
+    
+#   def __str__(self):
+#     return f'hi my name is {self.name}'  
+  
+#   def talk(self):
+#     print(self.name)
+#     print (super().talk())
+#     return f'hi my name is {self.name}'
+  
+#   def getpass(self):
+#     return (self.__password)
+  
+
+    
+
+# son1 =Son('ahmed',20)
+# print(son1)
+# print(son1.talk())
+# print(son1.getpass())
+   
+   
+class Square:
+  def __init__(self,x=30):
+     self.x=x
+     
+  def __str__(self):
+    return f'the square length is {self.x}'
+  
+  def area(self):
+
+    return  self.x*self.x
+    
+
+class Rectangle(Square):
+ 
+  def __init__(self,y):
+    super().__init__() 
+    self.y=y 
+  def area(self):
+    return self.x*self.y  
         
+area1=Square(30)
+print(area1)   
+  
+
+area2=Rectangle(50) 
+print(area2.area())
+     
