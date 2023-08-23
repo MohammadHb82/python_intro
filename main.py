@@ -168,30 +168,87 @@
 # print(son1.getpass())
    
    
-class Square:
-  def __init__(self,x=30):
-     self.x=x
+# class Square:
+#   def __init__(self,x=30):
+#      self.x=x
      
-  def __str__(self):
-    return f'the square length is {self.x}'
+#   def __str__(self):
+#     return f'the square length is {self.x}'
   
-  def area(self):
+#   def area(self):
 
-    return  self.x*self.x
+#     return  self.x*self.x
     
 
-class Rectangle(Square):
+# class Rectangle(Square):
  
-  def __init__(self,y):
-    super().__init__() 
-    self.y=y 
-  def area(self):
-    return self.x*self.y  
+#   def __init__(self,y):
+#     super().__init__() 
+#     self.y=y 
+#   def area(self):
+#     return self.x*self.y  
         
-area1=Square(30)
-print(area1)   
+# area1=Square(30)
+# print(area1)   
   
 
-area2=Rectangle(50) 
-print(area2.area())
+# area2=Rectangle(50) 
+# print(area2.area())
      
+     
+class Father :
+  def __init__(self,name,age,haircolor):
+    self.fathname=name
+    self.fathage=age
+    self.haircolor=haircolor
+    
+  def __str__(self):
+    return f'fathes name is {self.fathname} , father age is {self.fathage} , haircolor is {self.haircolor}' 
+  
+  
+  def talk(self):
+    return f'hello fathers name is {self.fathname}' 
+  
+class Mother:
+  def __init__(self, name ,age ,eyecolor):
+    self.mumname=name
+    self.mumage=age
+    self.eyecolor=eyecolor
+    
+  def __str__(self):
+      return f'mothers name is {self.mumname} , mother age is {self.mumage} , eyecolor is {self.eyecolor}'  
+    
+
+class Party:
+  def __init__(self,location):
+    self.location=location
+    
+  def __str__(self):
+    return f' the party location is {self.location}' 
+    
+    
+# class Friends:
+  
+#   def __init__(self, friends=[]):
+#     self.n    
+class Son(Father,Mother,Party):
+  def __init__(self , name, age,fathname,fathage,haircolor,mumname,mumage,eyecolor,location):
+    self.sonname=name
+    self.sonage=age
+    Father.__init__( self,fathname,fathage,haircolor)
+    Mother.__init__(self, mumname,mumage,eyecolor)
+    Party.__init__(self,location)
+  
+  def talk(self):
+    print (super().talk())
+  
+  def __str__(self):
+    return f' son name is {self.sonname} , son age is {self.sonage} , father name is {self.fathname}, mother name is {self.mumname} mother age is {self.mumage} and the location of party is {self.location}'
+        
+        
+        
+son1= Son('ali',20,'ahmed',50,'black','sara',40,'blue','amman')
+
+print(son1)   
+son1.talk()    
+
